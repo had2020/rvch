@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "RegisterABI.h"
-#include "InstructionSets.h" // Only the RiscVIMAC at the moment.
+#include "InstructionSets.h" // Only the RiscVI at the moment.
 
 int main( int argc, char *argv[] ) {
 
@@ -42,6 +42,13 @@ int main( int argc, char *argv[] ) {
     }
 
 
+    uint64_t pc = 0;
+
+    while(1) {
+        // TODO: Fetch Decode Excute with a dispatch table
+
+        pc += 4;
+    }
 
     // Clean up
     printf("Virtual Machine Process Ended.\n");
